@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> invoice </title>
+    
+    <style>
+    .invoice-box {
+        max-width: 800px;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #555;
+    }
+    
+    .invoice-box table {
+        width: 100%;
+        line-height: inherit;
+        text-align: left;
+    }
+    
+    .invoice-box table td {
+        padding: 5px;
+        vertical-align: top;
+    }
+    
+    .invoice-box table tr td:nth-child(2) {
+        text-align: right;
+    }
+    
+    .invoice-box table tr.top table td {
+        padding-bottom: 20px;
+    }
+    
+    .invoice-box table tr.top table td.title {
+        font-size: 45px;
+        line-height: 45px;
+        color: #333;
+    }
+    
+    .invoice-box table tr.information table td {
+        padding-bottom: 40px;
+    }
+    
+    .invoice-box table tr.heading td {
+        background: #eee;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+    }
+    
+    .invoice-box table tr.details td {
+        padding-bottom: 20px;
+    }
+    
+    .invoice-box table tr.item td{
+        border-bottom: 1px solid #eee;
+    }
+    
+    .invoice-box table tr.item.last td {
+        border-bottom: none;
+    }
+    
+    .invoice-box table tr.total td:nth-child(2) {
+        border-top: 2px solid #eee;
+        font-weight: bold;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .invoice-box table tr.top table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        
+        .invoice-box table tr.information table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    /** RTL **/
+    .rtl {
+        direction: rtl;
+        font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    }
+    
+    .rtl table {
+        text-align: right;
+    }
+    
+    .rtl table tr td:nth-child(2) {
+        text-align: left;
+    }
+    </style>
+</head>
+
+<body>
+ <div class="col-md-4">
+          
+        </div>
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <img src="logo 2.png" width="100px" height="100px">
+                            </td>
+                            
+                            <td>
+                                Invoice #: 123<br>
+                                Created: January 1, 2019<br>
+                                Due: February 1, 2019
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+            <tr class="information">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td>
+                                User<br>
+                                12345 Star Road<br>
+                                Sunnyville, CA 12345
+                            </td>
+                            
+                            <td>
+                                Dairy Buddy<br>
+								Digital Land<br>
+								
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+             <!--<tr class="heading">
+			      <td>
+                    Payment Method
+                </td>
+                
+                <td>
+                    Check #
+                </td>
+            </tr>
+            
+            <tr class="details">
+                <td>
+                    Check
+                </td>
+                
+                <td>
+                    ₹     1000
+                </td>
+            </tr> !-->
+            
+            <tr class="heading">
+                <td>
+                   Milk Collection
+                </td>
+                
+                <td>
+                    Monthly Total
+                </td>
+            </tr>
+            
+            <tr class="details">
+                <td>
+                    Milk Revenue
+                </td>
+                
+                <td>
+                   <b>Total:       ₹     6750.00</b>
+                </td>
+            </tr>
+            
+            <tr class="heading">
+                <td>
+                    Item
+                </td>
+                
+                <td>
+                    Price
+                </td>
+            </tr>
+            
+            <tr class="item">
+                <td>
+                    Doctor Appointment
+                </td>
+                
+                <td>
+                    ₹300.00
+                </td>
+            </tr>
+            
+            <tr class="item">
+                <td>
+                    Order 
+                </td>
+                
+                <td>
+                    ₹1750.00
+                </td>
+            </tr>
+            
+            <tr class="item last">
+                <td>
+                    Order 1
+                </td>
+                
+                <td>
+                    ₹3000.00
+                </td>
+            </tr>
+            
+            <tr class="total">
+                <td></td>
+                
+                <td>
+                   Total: ₹5050.00
+                </td>
+            </tr>
+		
+			
+			
+			            <tr class="heading">
+                <td>
+                   Total Payable
+                </td>
+                
+                <td>
+                    Monthly Total
+                </td>
+            </tr>
+			
+			 <tr class="details">
+                <td>
+                    Milk Revenue
+                </td>
+                
+                <td>
+                     ₹  6750.00
+                </td>
+            </tr>
+			
+			
+            
+			    <tr class="item last">
+                <td>
+                    Bills Total
+                </td>
+                
+                <td>
+                    ₹5050.00
+                </td>
+            </tr>
+			
+			
+			 <tr class="total">
+                <td></td>
+                
+                <td>
+                   Total: ₹1700.00
+                </td>
+            </tr>
+        </table>
+    </div>
+	    <li class="form-line" data-type="control_button" id="id_2">
+        <div id="cid_2" class="form-input-wide">
+          <div style="text-align:center" class="form-buttons-wrapper">
+            <button  onclick="window.location.href='laoding.html';"id="input_2" type="submit" class="form-submit-button" data-component="button">
+              Print
+            </button>
+          </div>
+		  	   <li class="form-line" data-type="control_button" id="id_2">
+        <div id="cid_2" class="form-input-wide">
+          <div style="text-align:center" class="form-buttons-wrapper">
+            
+			
+			</div>
+			</div>
+			</li>
+        
+      
+</body>
+</html>
